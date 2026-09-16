@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+<title id="title">Solar meridional circulation profile</title>
+<desc id="desc">Meridional cross-section of the Sun showing poleward near-surface flow in both hemispheres and equatorward return flow at depth.</desc>
+<defs>
+ <radialGradient id="sun" cx="48%" cy="45%"><stop offset="0" stop-color="#ffd56b"/><stop offset=".62" stop-color="#f49b3f"/><stop offset="1" stop-color="#cf5c2f"/></radialGradient>
+ <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6 Z" fill="#eaf7ff"/></marker>
+ <marker id="arrowDeep" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6 Z" fill="#133a59"/></marker>
+ <clipPath id="disk"><circle cx="450" cy="260" r="205"/></clipPath>
+</defs>
+<rect width="900" height="520" fill="#102c43"/>
+<circle cx="450" cy="260" r="210" fill="url(#sun)" stroke="#ffd58b" stroke-width="5"/>
+<circle cx="450" cy="260" r="145" fill="none" stroke="#f7c66b" stroke-opacity=".5" stroke-width="2"/>
+<line x1="450" y1="48" x2="450" y2="472" stroke="#fff" stroke-opacity=".22" stroke-dasharray="7 9"/>
+<line x1="242" y1="260" x2="658" y2="260" stroke="#fff" stroke-opacity=".22" stroke-dasharray="7 9"/>
+<!-- surface poleward flow -->
+<g fill="none" stroke="#eaf7ff" stroke-width="8" stroke-linecap="round" marker-end="url(#arrowBlue)">
+ <path d="M450 69 C380 72 315 110 276 171"/>
+ <path d="M450 69 C520 72 585 110 624 171"/>
+</g>
+<!-- descending high-latitude branches and deep equatorward return -->
+<g fill="none" stroke="#133a59" stroke-width="8" stroke-linecap="round" marker-end="url(#arrowDeep)">
+ <path d="M275 171 C245 226 257 318 304 365 C346 407 397 421 438 414"/>
+ <path d="M625 171 C655 226 643 318 596 365 C554 407 503 421 462 414"/>
+</g>
+<!-- upwelling near equator closes the cell -->
+<g fill="none" stroke="#133a59" stroke-width="7" stroke-linecap="round" marker-end="url(#arrowDeep)">
+ <path d="M438 414 C451 365 451 316 450 270"/>
+ <path d="M462 414 C449 365 449 316 450 270"/>
+</g>
+<!-- latitude labels -->
+<g font-family="Arial, sans-serif" fill="#f5f8fb" font-size="20" text-anchor="middle">
+ <text x="450" y="31">North pole</text><text x="450" y="505">South pole</text>
+ <text x="708" y="267">Equator</text>
+</g>
+<g font-family="Arial, sans-serif" font-size="18" font-weight="700">
+ <text x="115" y="96" fill="#eaf7ff">near-surface poleward flow</text>
+ <text x="110" y="425" fill="#a9d2ec">deep equatorward return flow</text>
+</g>
+<!-- small profile inset -->
+<g transform="translate(680,75)">
+ <rect x="0" y="0" width="170" height="145" rx="14" fill="#0b2235" stroke="#53718a"/>
+ <text x="85" y="25" text-anchor="middle" font-family="Arial" font-size="15" fill="#f5f8fb">schematic flow profile</text>
+ <line x1="35" y1="120" x2="145" y2="120" stroke="#9fb4c4"/><line x1="35" y1="40" x2="35" y2="120" stroke="#9fb4c4"/>
+ <text x="90" y="140" text-anchor="middle" font-family="Arial" font-size="12" fill="#c7d5df">latitude</text>
+ <path d="M40 112 C58 90 69 58 84 50 C100 58 112 90 140 112" fill="none" stroke="#eaf7ff" stroke-width="4"/>
+</g>
+</svg>
